@@ -11,9 +11,14 @@ Kernel:
 You can choose not to use the LTS Kernel,just comment out the relevant code
 
 Bootloader:
-GRUB(Default)
-systemd-boot(Optional)
+- GRUB(Default)
+- systemd-boot(Optional)
   ---Not recommended "systemd-boot",because it only supports UEFI
+
+BootloaderSupported:
+- UEFI (GRUB or systemd-boot)
+- BIOS users:
+  Please modify boot.loader.grub.device according to your disk
 
 Vmware Tools:
 You can enable VMware Tools by removeing the corresponding comments
