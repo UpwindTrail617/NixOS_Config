@@ -16,9 +16,8 @@
       # GNU GRUB
       boot.loader.grub = {
         enable = true;
-        device = [ "nodev" ];
+        devices = [ "nodev" ];
         efiSupport = true;
-        efiInstallAsRemovable = true;
 
         # Auto Find Other System
         useOSProber = true;
