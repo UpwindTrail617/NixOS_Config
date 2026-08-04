@@ -75,9 +75,10 @@
     services.blueman.enable = true;
 
     # Users
-    users.users.Reimilia = {
+    users.users.reimilia = {
       isNormalUser = true;
       description = "Reimilia";
+      shell = pkgs.zsh;
       
       extraGroups = [
         "wheel"
@@ -102,6 +103,7 @@
       git
       gnumake
       gcc
+      python3
 
       #Network
       wget

@@ -3,6 +3,7 @@
 Tips:
 This Config uses a TempPassword
 Please Run "passwd" in the termimal after login.
+DefaultUserName:reimilia
 TempPassword:123456
 
 Kernel:
@@ -19,7 +20,10 @@ You can enable VMware Tools by removeing the corresponding comments
 
 InputMethod:
 - IBus
-- Rime
+- Rime(Chinese Input Method)
+
+Shell:
+- ZSH(Default)
 
 Desktop:
   Default:
