@@ -10,8 +10,19 @@
 
     # Bootloader
     
-      # UEFI(Systemd-boot)
-      boot.loader.systemd-boot.enable = true;
+      # UEFI(Systemd-Boot)
+      #boot.loader.systemd-boot.enable = true;
+
+      # GNU GRUB
+      boot.loader.grub = {
+        enable = true;
+        efiSupport = true;
+        efiInstallAsRemovable = true;
+
+        # Auto Find Other System
+        useOSProber = true;
+
+      };
 
       # Allow Edit EFI NVRAM
       boot.loader.efi.canTouchEfiVariables = true;
@@ -64,9 +75,9 @@
     services.blueman.enable = true;
 
     # Users
-    users.users.UpwindTrail = {
+    users.users.Reimilia = {
       isNormalUser = true;
-      description = "UpwindTrail";
+      description = "Reimilia";
       
       extraGroups = [
         "wheel"
@@ -74,6 +85,9 @@
         "video"
         "audio"
       ];
+      
+      initialPassword = "123456";
+
     };
 
     # Sudo
