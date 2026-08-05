@@ -1,152 +1,51 @@
-  { config, pkgs, ... }:
+{ config, pkgs, ... }:
 
-  {
-
-    # Base Import
-    imports =
-      [
-        ./hardware-configuration.nix
-      ];
+{
+  # Modules
+  imports = [
+    # Hardware
+    ./hardware-configuration.nix
 
     # Bootloader
-    
-      # UEFI(Systemd-Boot)
-      #boot.loader.systemd-boot.enable = true;
-
-      # GNU GRUB
-      boot.loader.grub = {
-        enable = true;
-        devices = [ "nodev" ];
-        efiSupport = true;
-
-        # Auto Find Other System
-        useOSProber = true;
-
-      };
-
-      # Allow Edit EFI NVRAM
-      boot.loader.efi.canTouchEfiVariables = true;
-
-    #Kernel
-    boot.kernelPackages = pkgs.linuxPackages_latest;
-
-    # Network
-    networking.networkmanager.enable = true;
-    
-    #Hostname
-    networking.hostName = "NixOS";
-
-    #TimeZone
-    time.timeZone = "Asia/Shanghai";
-
-    #Locale
-    i18n.defaultLocale = "en_US.UTF-8";
+    ./modules/boot/grub.nix
 
     # Desktop
-    services.xserver.enable = true;
-      # GNOME
-      services.displayManager.gdm.enable = true;
-      services.desktopManager.gnome.enable = true;
-      # KDE Plasma
-      #services.displayManager.sddm.enable = true;
-      #services.desktopManager.plasma6.enable = true;
+    ./modules/desktop/gnome.nix
 
-    # InputMethod
-    i18n.inputMethod = {
-      enable = true;
-      type = "ibus";
+    # Locale(English Default)
+    ./modules/locale/en_US.nix
+    #./modules/locale/zh_CN.nix
 
-      ibus.engines = with
-        pkgs.ibus-engines; [
-          rime
-        ];
-    };
+    # Input
+    ./modules/input/ibus.nix
+
+    # Shell
+    ./modules/shell/zsh.nix
 
     # Audio
-    services.pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-    };
+    ./modules/audio/pipewire.nix
 
-    #Bluetooth
-    hardware.bluetooth.enable = true;
-    services.blueman.enable = true;
+    # Bluetooth
+    ./modules/bluetooth/bluetooth.nix
 
     # Users
-    users.users.reimilia = {
-      isNormalUser = true;
-      description = "Reimilia";
-      shell = pkgs.zsh;
-      
-      extraGroups = [
-        "wheel"
-        "networkmanager"
-        "video"
-        "audio"
-      ];
-      
-      initialPassword = "123456";
+    ./modules/users/reimilia.nix
 
-    };
+    # Network
+    ./modules/network/network.nix
 
-    # Sudo
-    security.sudo.wheelNeedsPassword = true;
+    # Mirrors
+    ./modules/mirrors/ustc.nix
 
     # Packages
-    environment.systemPackages = with pkgs; [
+    ./modules/packages/base.nix      # Base
+    ./modules/packages/applications.nix     # Applications
+  ];
 
-      # Code
-      vim
-      nano
-      git
-      gnumake
-      gcc
-      python3
+  # Firmware
+  hardware.enableAllFirmware = true;
 
-      #Network
-      wget
-      curl
-
-      # SystemInfo
-      fastfetch
-
-      #unpack
-      unzip
-      p7zip
-
-    ];
-
-    # non-free Packages
-    nixpkgs.config.allowUnfree = true;
-
-    # NixOS Substituters Form China
-    nix.settings = {
-
-      substituters = [
-        "https://mirrors.ustc.edu.cn/nix-channels/store"
-          "https://cache.nixos.org/"     
-      ];
-      
-      trusted-substituters = [
-        "https://mirrors.ustc.edu.cn/nix-channels/store"
-          "https://cache.nixos.org/"
-        ];
-    };
-
-    # ZSH
-    programs.zsh.enable = true;
-
-    # Git
-    programs.git.enable = true;
-
-    #VMware
-    #virtualisation.vmware.guest.enable = true;
-
-    # Firmware
-    hardware.enableAllFirmware = true;
-
-    #SystemVer.
-    system.stateVersion = "26.05";
-  }
+  # System Version
+  system.stateVersion = "26.05";
+  
+}
