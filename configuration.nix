@@ -11,6 +11,7 @@
 
     # Desktop
     ./modules/desktop/gnome.nix
+    #./modules/desktop/kde.nix
 
     # Locale(English Default)
     ./modules/locale/en_US.nix
