@@ -28,8 +28,8 @@
     # Bluetooth
     ./modules/bluetooth/bluetooth.nix
 
-    # User
-    ./modules/user/reimilia.nix
+    # Users
+    ./modules/users/reimilia.nix
 
     # Network
     ./modules/network/network.nix
