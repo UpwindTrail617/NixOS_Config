@@ -31,5 +31,5 @@ nixos-install --option substituters "https://mirrors.ustc.edu.cn/nix-channels/st
 - 新增多个可选择镜像源，若发现速度奇慢，排除你的网络的问题后，更换镜像源
 
 # Ver1.2更新内容
-- 1.添加了flake，请使用"nixos-rebuild swicth --flake .#reimilia"命令通过flake更新
-(虚拟机磁盘炸了，lock文件请使用"nix flake lock"命令生成lock文件，后面会补的(⓿_⓿))
+- 1.添加了flake，确保自己在/etc/nixos目录下，使用"nixos-rebuild swicth --flake .#reimilia"命令通过flake更新
+(虚拟机磁盘炸了，lock文件请先暂时使用"nix --extra-experimental-features "nix-command flakes" flake lock"命令生成lock文件，后面会补的(⓿_⓿))

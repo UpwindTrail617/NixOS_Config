@@ -4,7 +4,7 @@
   # Modules
   imports = [
     # Hardware
-    ./hardware-configuration.nix
+    #./hardware-configuration.nix
 
     # Bootloader
     ./modules/boot/grub.nix     # GRUB(BIOS+UEFI)
@@ -51,9 +51,6 @@
     ./modules/packages/base.nix      # Base
     ./modules/packages/applications.nix     # Applications
   ];
-
-  # Open Flake
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Firmware
   hardware.enableAllFirmware = true;
