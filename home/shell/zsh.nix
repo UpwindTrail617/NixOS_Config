@@ -3,7 +3,7 @@
 {
   programs.zsh = {
     enable = true;
-    autosuggestions.enable = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
     oh-my-zsh = {
@@ -32,4 +32,6 @@
     zsh-powerlevel10k
     meslo-lgs-nf
   ];
+
+  home.file.".zshrc".force = true;
 }

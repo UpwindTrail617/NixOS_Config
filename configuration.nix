@@ -9,7 +9,7 @@
     # System Plugins
     ./modules/system/auto-update.nix     # AUTO-Update
     ./modules/system/clean.nix     # AUTO-Clean-Rubbish
-    ./modules/system/nix-command     # Advanced package manager
+    ./modules/system/nix-command.nix     # Advanced package manager
     ./modules/system/zram.nix     # Memory ZSTD
     #./modules/system/nopwdtodesktop.nix     # Auto Login
 
