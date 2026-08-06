@@ -4,6 +4,7 @@
   users.users.reimilia = {
     isNormalUser = true;
     description = "Reimilia";
+    shell = pkgs.zsh;
 
     extraGroups = [
       "wheel"     # Sudo

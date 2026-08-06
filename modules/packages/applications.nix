@@ -1,21 +1,28 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
+  # allow non-free packages
+  nixpkgs.config.allowUnfree = true;
+
+  # System Packages
   environment.systemPackages = with pkgs; [
-    #Browser
-    firefox
+    # Edit
+    nano
+    vim
 
-    # Code Tools
+    # Network Tools
+    networkmanager
+    curl
+    wget
     git
-    gcc
-    gnumake
-    cmake
-    clang-tools
 
-    # Code Language
-    python3
-    #rustc
-    #cargo
-    #nodejs
+    # SystemTools
+    fastfetch
+    os-prober
+    unzip
+    openssh
+
+    # 忘记加浏览器了qaq
+    firefox
   ];
 }
