@@ -21,5 +21,8 @@
     os-prober
     unzip
     openssh
+
+    # 忘记加浏览器了qaq
+    firefox
   ];
 }
