@@ -5,7 +5,7 @@
   networking.networkmanager.enable = true;
 
   # Hostname
-  networking.hostName = "oh-my-nixos";
+  networking.hostName = "reimilia";
 
   # TimeZone
   time.timeZone = "Asia/Shanghai";
