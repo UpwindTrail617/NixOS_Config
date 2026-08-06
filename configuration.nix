@@ -8,6 +8,7 @@
 
     # Bootloader
     ./modules/boot/grub.nix     # GRUB(BIOS+UEFI)
+    ./module/boot/grub-theme.nix     # GRUB Themes(Reimu)
     #./modules/boot/systemd-boot.nix     #systemd-boot(UEFI-Only)
 
     # Desktop
@@ -17,6 +18,9 @@
     #./modules/desktop/lxqt.nix     #LXQT
     #./modules/desktop/hyprland     #Hyprland
     #./modules/desktop/cosmic.nix     #COSMIC
+
+    # Set Default WallPaper
+    ./modules/wallpaper/default.nix
 
     # Locale(English Default)
     ./modules/locale/en_US.nix     #English(US)
