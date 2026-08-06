@@ -20,5 +20,6 @@
 
     # SystemTools
     fastfetch
+    os-prober
   ];
 }

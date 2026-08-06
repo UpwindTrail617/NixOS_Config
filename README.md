@@ -34,3 +34,6 @@ nixos-install --option substituters "https://mirrors.ustc.edu.cn/nix-channels/st
 # Ver1.2更新内容
 - 1.添加了flake,使用"nixos-install/nixos-rebuild swicth --flake github:UpwindTrail617/NixOS_Config#reimilia"命令通过flake安装/更新
 - 提示：如果你想自定义使用别的模块还是请你git到本地修改后使用(*/ω＼*)
+
+# Ver1.3更新内容
+- 1.添加了东方GRUB主题，修复了Very多的Bug
