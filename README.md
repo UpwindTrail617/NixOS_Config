@@ -1,12 +1,15 @@
 # Reimilia NixOS Configuration
 
+⚠重要提示：不要同时启用多个同类型的功能模块，会引起冲突！
+
+
 # 特性╰(*°▽°*)╯
-- 默认GNOME桌面环境，可选KDE Plasma
-- IBus + Rime 输入法
-- 将ZSH作为默认SHELL
-- 使用GRUB作为引导加载器
+- 默认GNOME桌面环境，可选其他桌面环境，具体请看modules/desktop
+- IBus + Rime 输入法(可选fcitx5，推荐KDE用户使用)
+- 将ZSH作为默认SHELL(若有需求可选Bash)
+- 使用GRUB作为引导加载器(Systemd-Boot进入可选)
 - 默认全英文环境，可选为中文环境
-- 升级为模块化配置结构
+- 模块化配置结构
 
 # 如何使用ヾ(•ω•`)o
 - 1.使用cfdisk分区(如果你喜欢用别的也可以)
@@ -20,3 +23,7 @@
 
 咲夜提醒您：经作者测试，可以使用以下命令加快NixOS在国内的下载速度
 nixos-install --option substituters "https://mirrors.ustc.edu.cn/nix-channels/store https://cache.nixos.org"
+
+Ver1.2更新内容
+- 1.添加了flake，请使用"nixos-rebuild swicth --flake .#reimilia"命令通过flake更新
+(虚拟机磁盘炸了，lock文件请使用"nix flake lock"命令生成lock文件，后面会补的(⓿_⓿))

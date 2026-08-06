@@ -44,10 +44,7 @@
   ];
 
   # Open Flake
-  nix.setting.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Firmware
   hardware.enableAllFirmware = true;
