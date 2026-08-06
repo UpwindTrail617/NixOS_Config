@@ -8,7 +8,7 @@
 
     # Bootloader
     ./modules/boot/grub.nix     # GRUB(BIOS+UEFI)
-    ./module/boot/grub-theme.nix     # GRUB Themes(Reimu)
+    ./modules/boot/grub-theme.nix     # GRUB Themes(Reimu)
     #./modules/boot/systemd-boot.nix     #systemd-boot(UEFI-Only)
 
     # Desktop
