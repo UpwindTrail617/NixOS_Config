@@ -19,9 +19,6 @@
     #./modules/desktop/hyprland     #Hyprland
     #./modules/desktop/cosmic.nix     #COSMIC
 
-    # Set Default WallPaper
-    ./modules/wallpaper/default.nix
-
     # Locale(English Default)
     ./modules/locale/en_US.nix     #English(US)
     #./modules/locale/zh_CN.nix     #中文(中国)
