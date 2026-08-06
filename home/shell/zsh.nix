@@ -9,7 +9,10 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "sudo" ];
-      theme = "powerlevel10k/powerlevel10k";
+    };
+
+    powerlevel10k = {
+      enable = true;
     };
 
     initExtra = ''
