@@ -32,6 +32,4 @@
     zsh-powerlevel10k
     meslo-lgs-nf
   ];
-
-  home.file.".zshrc".force = true;
 }

@@ -1,8 +1,9 @@
 # Reimilia NixOS Configuration
 
-⚠重要提示：不要同时启用多个同类型的功能模块，会引起冲突！
+- ⚠重要提示：不要同时启用多个同类型的功能模块，会引起冲突！
+- 提示：没啥可更新的了，直接变LTS长期(不)维护了 (o′┏▽┓｀o) 
 
-# 特性╰(*°▽°*)╯
+# 特性~(￣▽￣)~*
 - 默认GNOME桌面环境，可选很多种桌面环境
 - IBus + Rime 输入法
 - 将ZSH作为默认SHELL
@@ -41,3 +42,9 @@ nixos-install --option substituters "https://mirrors.ustc.edu.cn/nix-channels/st
 # Ver1.4更新内容
 - 1.添加了5个系统优化插件，详情见configuration.nix
 - 2.默认桌面改为xfce
+
+# Ver2.0_LTS更新内容(LTS版以后随缘更新了)
+- 1. 新增了Home-Manager(真是个史诗级的更新啊)
+- 2. 依旧Bug多到修不停！
+- 3. GNOME桌面添加默认壁纸，是魂魄妖梦诶(≧∇≦)ﾉ
+- 4. 代码留点小彩蛋
