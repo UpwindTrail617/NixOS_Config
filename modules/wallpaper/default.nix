@@ -23,7 +23,7 @@ let
         ;;
       *KDE*|*Plasma*)
         echo "Setting wallpaper for KDE Plasma"
-        ${pkgs.libsForQt5.plasma-workspace}/bin/plasma-apply-wallpaperimage "$WALLPAPER"
+        ${pkgs.kdePackages.plasma-workspace}/bin/plasma-apply-wallpaperimage "$WALLPAPER"
         ;;
       *COSMIC*)
         echo "Setting wallpaper for COSMIC"
@@ -61,7 +61,6 @@ in  {
   systemd.user.services.set-wallpaper = {
     description = "Set wallpaper for any desktop environment";
     after = [ "graphical-session.target" ];
-    conditionEnvironment = [ "DISPLAY" ];
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
       Type = "oneshot";

@@ -4,7 +4,7 @@
   # Modules
   imports = [
     # Hardware
-    #./hardware-configuration.nix
+    ./hardware-configuration.nix
 
     # Bootloader
     ./modules/boot/grub.nix     # GRUB(BIOS+UEFI)
