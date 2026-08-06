@@ -34,7 +34,7 @@
     ./modules/input/ibus.nix     #IBus
     #./modules/input/fcitx5.nix     #Fcitx5
 
-    # Shell
+    # 设置系统级默认Shell
     ./modules/shell/zsh.nix     #ZSH
     #./modules/shell/bash.nix     #Bash
 
@@ -56,8 +56,7 @@
     #./modules/mirrors/nju.nix     #南京大
 
     # Packages
-    ./modules/packages/base.nix      # Base
-    ./modules/packages/applications.nix     # Applications
+    ./modules/packages/applications.nix     # Base App
   ];
 
   # Firmware
