@@ -52,6 +52,9 @@
     ./modules/packages/applications.nix     # Applications
   ];
 
+  # Open Flake
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Firmware
   hardware.enableAllFirmware = true;
 

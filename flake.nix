@@ -1,5 +1,5 @@
 {
-  description = "Oh My NixOS Configuration";
+  description = "Reimilia NixOS Configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -9,8 +9,8 @@
 
     nixosConfigurations = {
 
-      nixos =
-        nixpkgs.lib.nixosSystem {
+      reimilia =
+nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
 
           modules = [
