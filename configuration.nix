@@ -6,17 +6,24 @@
     # Hardware
     ./hardware-configuration.nix
 
+    # System Plugins
+    ./modules/system/auto-update.nix     # AUTO-Update
+    ./modules/system/clean.nix     # AUTO-Clean-Rubbish
+    ./modules/system/nix-command     # Advanced package manager
+    ./modules/system/zram.nix     # Memory ZSTD
+    #./modules/system/nopwdtodesktop.nix     # Auto Login
+
     # Bootloader
     ./modules/boot/grub.nix     # GRUB(BIOS+UEFI)
     ./modules/boot/grub-theme.nix     # GRUB Themes(Reimu)
     #./modules/boot/systemd-boot.nix     #systemd-boot(UEFI-Only)
 
     # Desktop
-    ./modules/desktop/gnome.nix     #GNOME
+    #./modules/desktop/gnome.nix     #GNOME
     #./modules/desktop/kde.nix     #KDE Plasma
-    #./modules/desktop/xfce.nix     #XFCE
+    ./modules/desktop/xfce.nix     #XFCE
     #./modules/desktop/lxqt.nix     #LXQT
-    #./modules/desktop/hyprland     #Hyprland
+    #./modules/desktop/hyprland.nix     #Hyprland
     #./modules/desktop/cosmic.nix     #COSMIC
 
     # Locale(English Default)

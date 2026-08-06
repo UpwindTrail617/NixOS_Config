@@ -37,3 +37,7 @@ nixos-install --option substituters "https://mirrors.ustc.edu.cn/nix-channels/st
 
 # Ver1.3更新内容
 - 1.添加了东方GRUB主题，修复了Very多的Bug
+
+# Ver1.4更新内容
+- 1.添加了5个系统优化插件，详情见configuration.nix
+- 2.默认桌面改为xfce
