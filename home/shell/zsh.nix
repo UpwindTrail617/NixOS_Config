@@ -11,11 +11,10 @@
       plugins = [ "git" "sudo" ];
     };
 
-    powerlevel10k = {
-      enable = true;
-    };
-
     initExtra = ''
+      # Load Themes
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+      
       # 开机名言
       if command -v fortune > /dev/null; then
         echo
